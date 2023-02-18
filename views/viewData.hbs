@@ -1,0 +1,34 @@
+!doctype html>
+<html>
+    <head>
+        <title>View Data</title>
+    </head>
+
+    <body>
+        {{> header}}
+        {{#warning}}... Some Warning Text...{{/warning}}
+        <table border='1'>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Occupation</th>
+                <th>Company</th>
+            </tr>
+                    {{#each data}}
+
+            <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.age}}</td>
+                <td>{{data.occupation}}</td>
+                <td>{{data.company}}</td>
+            </tr>
+        </table>
+       {{else}}
+        <tr>
+            <td colspan="4">No data avaliable </td>
+        </tr>
+    {{/each}}
+</table>
+   
+    </body>
+</html>
